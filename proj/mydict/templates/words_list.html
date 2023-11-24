@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block title %} See all the words {% endblock %}
+
+{% block content %}
+<div class="table_div">
+    <table class="words_list">
+        <tr>
+            <th>ORIGINAL</th>
+            <th>TRANSLATION</th>
+        </tr>
+        {% for string in strings%}
+        <tr>
+            <td> {{string.0}}</td>
+            <td> {{string.1}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

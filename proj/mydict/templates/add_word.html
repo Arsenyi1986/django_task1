@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} Add a word {% endblock %}
+
+{% block content %}
+    <form method="POST" action="">
+        <div>
+            <label> Original word: </label>
+            <input type="text" name="word1" id="orig" required>
+        </div>
+        <div>
+            <label> Translation: </label>
+            <input type="text" name="word2" id="trans" required>
+        </div>
+        {% csrf_token %}
+        <div>
+            <button type="submit"> SEND </button>
+        </div>
+    </form>
+{% endblock %}
